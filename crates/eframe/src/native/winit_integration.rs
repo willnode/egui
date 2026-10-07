@@ -22,6 +22,7 @@ pub fn create_egui_context(storage: Option<&dyn crate::Storage>) -> egui::Contex
     profiling::function_scope!();
 
     pub const IS_DESKTOP: bool = cfg!(any(
+        target_os = "redox",
         target_os = "freebsd",
         target_os = "linux",
         target_os = "macos",

@@ -45,6 +45,7 @@ impl OperatingSystem {
             || cfg!(target_os = "freebsd")
             || cfg!(target_os = "netbsd")
             || cfg!(target_os = "openbsd")
+            || cfg!(target_os = "redox")
         {
             Self::Nix
         } else {
